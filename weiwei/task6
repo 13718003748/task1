@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>task6</title>
+<style type="text/css">
+body{
+	width:892px;
+	height:1386px;
+	background-color:white;
+	padding:0px 44px;
+	margin:0 auto;}
+/* 页眉 页脚*/
+header .head{
+	border-bottom:2px #938E8C solid;}
+header .box1{
+	width:110px;
+	height:61px;
+	background-color:#d45d5c;
+	color:#fff;
+	font-family:"黑体";
+	font-size:12px;}
+header .date1{
+	float:right;
+	font-family:"黑体";
+	font-size:12px;
+	color:#d45d5c;
+	position:relative;
+	top:34px;}	
+header hr,footer hr{
+	width:892px;
+	height:2px;
+	background-color:#938e8c;}
+footer div{
+	width:892px;
+	text-align:right;
+	font-size:12px;
+	color:#D45D5C;
+	font-family:"黑体";}
+/* 排版上部分*/
+.toppart,.bottompart{
+	border:1px white solid;
+	margin:40px 0px;}
+.leftpart{
+	position:relative;
+	width:641px;}
+/* 排版上右侧栏*/
+.toppart aside{
+	float:right;
+	width:203px;}
+.toppart aside hr{
+	width:203px;
+	height:2px;
+	background-color:#cc8091;
+	text-align:right;}
+.font1{
+	font-variant:small-caps;
+	text-decoration:underline;
+	color:#000;
+	font-size:24px;
+	font-family:"微软雅黑";
+	line-height:40px;
+	margin:0px;}
+.font2{
+	font-size:12px;
+	color:#676767;
+	font-family:"楷体";
+	margin:0px;
+	line-height:10px;}
+.font3{
+	font-size:116px;
+	font-style:italic;
+	color:#75b86b;
+	font-family:"微软雅黑";
+	margin:0px;}
+.font4{
+	float:left;
+	font-size:55px;
+	margin:0px 5px;
+	font-family: "微软雅黑";
+	color:#cc8091;}	
+.font5{
+	font-size:21px;
+	line-height:21px;
+	margin:0px;
+	height:21px;
+	font-family: "微软雅黑";
+	color:#cc8091;
+	margin-top:24px;
+	margin-bottom:0px;}
+.font6{
+	font-size:12px;
+	margin:0px;
+	height:12px;
+	font-family: "微软雅黑";
+	color:#cc8091;}
+/* 排版上左图片及段落*/
+section.toppart .img{
+	background-image:url(.jpg);
+	width:641px;
+	height:301px;
+	position:relative;
+	margin:0px 0px 40px 0px;}
+section.toppart .img .left{
+	border:1px #6BD77B solid;
+	background-color:#6BD77B;
+	width:189px;
+	height:299px;
+	opacity:0.4;}
+section.toppart .img .right{
+	float:right;
+	border:1px #ED5D60 solid;
+	background-color:#ED5D60;
+	width:189px;
+	height:299px;
+	opacity:0.4;}
+.leftpart .text{
+	border:1px white solid;
+	position:relative;
+	margin:20px 0px;
+	font-size:12px;
+	overflow:hidden;}
+.text h2{
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:underline;
+	font-family:"微软雅黑";
+	margin:0px;}
+.what{
+	float:left;
+	font-family:"宋体";
+	color:#767777;
+	width:200px;}
+.text .what h2{color:#418C59;}
+.when{
+	position:absolute;
+	color:#231815;
+	font-family:"微软雅黑";
+	opacity:0.7;
+	width:200px;
+	left:220px;
+	top:0px;}
+.text .when h2{color:#d2994f;}
+.how{
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:200px;
+	font-family:"微软雅黑";
+	font-size:12px;}
+.how h2{color:#cc7680;}
+.how .number{margin:16px;}
+.how span{
+	color:#cd4a48;
+	font-style:italic;
+	opacity:0.7;}
+.bottompart{
+	position:relative;}
+.downleftpart{
+	width:415px;}
+.downleftpart h2{
+	font-weight:bold;
+	font-family:"黑体";
+	margin:16px;
+	font-size:42px;
+	color:#11456b;}
+.downleftpart h2 span{
+	font-size:72px;
+	color:#F5E327;
+	font-style:italic;}
+.downleftpart h3{
+	font-size:33px;
+	color:#11456b;
+	font-family:"黑体";
+	font-weight:bold;}
+.downleftpart hr{
+	width:415px;
+	height:2px;
+	background-color:#11456b;}
+.downleftpart p{
+	font-size:12px;
+	color:#767777;
+	font-family:"宋体";
+	margin:16px;}
+.downleftpart p span.firstword{
+	float:left;
+	display:block;
+	font-size:70px;
+	color:#F5E327;
+	font-family:"微软雅黑";}
+.downleftpart img{
+	float:right;
+	margin:10px;}
+.downrightpart{
+	position:absolute;
+	width:458px;
+	top:0px;
+	right:0px;}
+.background{
+	position:relative;
+	background-image:url(jjlin.jpg);
+	width:458px;
+	height:275px;}
+.background .downbox{
+	position:absolute;
+	border:1px #B7B2B2 solid;
+	background-color:#B7B2B2;
+	width:456px;
+	height:59px;
+	opacity:0.6;
+	bottom:0px;}
+.background .line1{
+	position:absolute;
+	border:1px #72b16a solid;
+	width:3px;
+	height:42px;
+	background-color:#72b16a;
+	display:inline;
+	bottom:8px;
+	left:20px;}
+.background .line23{
+	position:absolute;
+	display:inline;
+	bottom:15px;
+	left:30px;}
+.background .line2{
+	font-size:26px;
+	color:#fff;
+	font-family:"微软雅黑";}
+.background .line3{
+	font-size:12px;
+	color:#72b16a;
+	font-style:italic;
+	font-family:"微软雅黑";
+	letter-spacing:140%;}
+.downdown{
+	position:relative;
+	width:419px;
+	height:278px;
+	background-color:#ECEAC1;
+	margin:20px 0;
+	padding:20px;}
+.downdown ul{
+	list-style-type:square;}
+.downdown li{
+	font-size:16px;
+	color:#5A5B5B;
+	font-family:"宋体";
+	text-align:left;
+	margin:20px;}
+.downdown li .litext{
+	font-size:12px;
+	color:#5a5b5b;
+	font-family:"宋体";
+	font-style:italic;
+	text-align:right;}
+.downdown .rightend{
+	float:right;
+	width:160px;
+	margin:0px;
+	padding:0px;
+	font-size:14px;
+	color:#5A5B5B;
+	font-family:"黑体";}
+.downdown .red{
+	position:absolute;
+	border:1px #E77375 solid;
+	width:238px;
+	height:138px;
+	background-color:#E77375;
+	padding:10px;
+	bottom:0px;
+	left:0px;}
+.red .o{
+	float:left;
+	font-size:110px;
+	color:#FFFFFF;
+	font-family:"微软雅黑";}
+.red .lefttext{
+	vertical-align:middle;
+	margin:0px;}
+.red .line{
+	float:left;
+	border:1px white solid;
+	width:0px;
+	height:84px;
+	background-color:white;}
+.red .textbox{
+	height:86px;}
+.red .textbox .up{
+	font-size:21px;
+	color:white;
+	font-family:"黑体";
+	font-style:italic;
+	margin:24px;}
+.red .textbox .down{
+	font-size:12px;
+	color:#FFFFFF;
+	font-family:"黑体";
+	margin:6px;}
+</style>
+</head>
+
+<body>
+<header>
+<div class="head">
+<p class="date1">2016.3</p>
+<div class="box1">ife.baidu.com</div>
+</div>
+</header>
+
+<section class="toppart">
+<aside>
+<hr />
+<p class="font1">About</p>
+<p class="font1">Techelonoge</p>
+<p class="font2">About technology about technology about technology</p>
+<p class="font3">700</p>
+<p class="font4">3.2</p>
+<p class="font5">CSS</p>
+<p class="font6">CSSCSSCSSSCCSSS</p>
+</aside>
+<article class="leftpart">
+<article class="img">
+<div class="right"></div>
+<div class="left"></div>
+</article>
+<article class="text">
+<article class="what">
+<h2>What</h2>
+<p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端</p>
+</article>
+<article class="when">
+<h2>When</h2>
+<p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端</p>
+</article>
+<article class="how">
+<h2>How</h2>
+<p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+<p class="number">What------<span>40%</span></p>
+<p class="number">What------<span>30%</span></p>
+<p class="number">What------<span>30%</span></p>
+</article>
+</article>
+</article>
+</section>
+<section class="bottompart">
+<article class="downleftpart">
+<article>
+<h2><span>THE</span> THECHNOLOGE OF FONT</h2>
+<h3>前端技术领域</h3>
+<hr />
+<p><span class="firstword">前</span>端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端端前端前端前端前端前端前端前前端前端前端前端前端前端前端前<img src="file:///C|/Users/Administrator/Desktop/照片/task-3.jpg" width="191px" height="301px">端前前端前端前端前前端前端前端前端前端前端前端前前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端前端前端<br />
+<span class="indent">&nbsp; &nbsp; 前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</span><br />
+<span class="indent">&nbsp; &nbsp; 前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</span></p>
+
+</article>
+</article>
+<article class="downrightpart">
+<article>
+<div class="background">
+<div class="downbox"></div>
+<div class="line1"></div>
+<div class="line23"><span class="line2">前端技术</span><span class="line3">前端技术前端技术</span></div>
+</div>
+</article>
+<article class="downdown">
+<ul>
+<li>前端前端前端前端前端..............<span class="litext">前端</span></li>
+<li>前端前端前端......................<span class="litext">前端</span></li>
+<li>前端前端前端前端前端前端..........<span class="litext">前端</span></li>
+</ul>
+<div class="rightend">
+<p><span>"</span>hello world hello world hello world hello world hello world hello world hello world hello world hello world hello world<span>"</span></p>
+</div>
+<div class="red">
+<div class="o">0</div>
+<div class="lefttext">
+<div class="line"></div>
+<div class="textbox">
+<p class="up">ONE TWO<br /> THREE FOUR FIVE</p>
+<p class="down">hello world hello world<br />
+hello world</p>
+</div>
+</div>
+</div>
+</article>
+</article>
+</section>
+<footer>
+<hr />
+<div>ife.baidu.com</div>
+</footer>
+</body>
+</html>
