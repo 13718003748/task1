@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>task9</title>
+<style>
+header{
+	width:100%;
+	max-width:1200px;
+	height:60px;
+	background-color:#2292c1;
+	padding:10px;
+	box-sizing:border-box;
+	position:relative;
+	margin:0 auto;
+}
+header img{
+	float:left;
+	margin-left:40px;
+}
+header form{
+	width:400px;
+	height:30px;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin:auto 40px auto auto;
+}
+.search1{
+	width:300px;
+	height:30px;
+	border-radius:20px;
+}
+.login1 {
+	width: 100px;
+	height: 30px;
+	color: white;
+	font-family: "黑体", "宋体", "微软雅黑", "楷体";
+	line-height: 30px;
+}
+.all{
+	width:1200px;
+	height:1200px;
+	margin:0 auto;
+	position:relative;
+	background-color:#1F1E1E;
+}
+aside{
+	width:300px;
+	height:100%;
+	background-color:#1F1E1E;
+	position:relative;
+	float:left;
+}
+.article_left1{
+	width:300px;
+	height:200px;
+	position:relative;
+}
+.aside11{
+	width:220px;
+	height:80px;
+	position:absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 20px auto;
+}
+.aside11 img{
+	float:left;
+}
+.aside11 span{
+	height:80px;
+	line-height:80px;
+	margin-left:30px;
+	font-family:Cambria,"Hoefler Text","Liberation Serif", Times, "Times New Roman", serif;
+	font-size:24px;
+	color:white;
+}
+.aside12{
+	width:200px;
+	height:30px;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin:130px auto;
+	font-family:"黑体", "宋体", "微软雅黑", "楷体";
+	font-size:16px;
+	color:#A3A0A0;
+}
+.aside121{
+	width:40px;
+	height:40px;
+	float:left;
+}
+.aside122{
+	width:40px;
+	height:40px;
+	position:absolute;
+	right:0px;
+}
+.article_left2{
+	width:300px;
+	height:auto;
+	position:relative;
+	font-size:16px;
+	overflow:hidden;
+}
+.article_left2 li{
+	margin:10px;
+}
+.aside_out{
+	text-indent:80px;
+	color:#6e8095;
+}
+.aside_out>li{
+	padding:15px 0;
+}
+.aside_out ul>li{
+	padding-top:15px;
+}
+.aside_middle,.aside_inset{
+	margin-left:20px;
+}
+.aside_out>li:hover{
+	color:#fff;
+	background-color:#383d4e;
+}
+.main{
+	margin-left:260px;
+	width:1020px;
+	height:1200px;
+	background:#eeeeed;
+}
+.main nav{
+	width:100%;
+	height:30px;
+	padding-left:30px;
+	height:30px;
+	line-height:30px;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	background:#fff;
+}
+.main nav a{
+	  color: #aaaaaa;
+	  padding-right:10px;
+}
+.main nav a:last-child{
+	color:#6898c2;
+}
+.content{
+	margin:20px 60px;
+}
+.section_1{
+	width:890px;
+	height:80px;
+	background:#fff;
+	border:1px solid #dcdcdc;
+}
+.section_1>div{
+	margin-top:10px;
+	margin-left:20px;
+	display:inline-block;
+	color:#aaaaaa;
+}
+.section_1>div:first-child{
+	position:relative;
+	top:-30px;
+}
+select,input[type="date"]{
+	height:25px;
+	margin-left:10px;
+	maegin-right:10px;
+	margin-bottom:5px;
+	padding-left:10px;
+	color:#323333;
+	border:1px solid #aaaaaa;
+	outline:none;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+#list,#people,#time{
+	width:70px;
+}
+#buy,#sell,#number,input[type="date"]{
+	width:130px;
+}
+input[type="image"]{
+	margin-left:-10px;
+	outline:none;
+}
+input[type="submit"]{
+	position:relative;
+	top:-15px;
+	width:50px;
+	height:25px;
+	color:#fff;
+	background:#388bc2;
+	border:0;
+	border-radius:3px;
+}
+.section_2{
+	margin-top:15px;
+	height:65px;
+	font-family:"微软雅黑";
+}
+.section_2 a{
+	float:left;
+	height:65px;
+	width:113px;
+	margin-right:5px;
+	color:#323333;
+	padding-top:10px;
+	line-height:20px;
+	text-align:center;
+	border-top:1px solid #dcdcdc;
+	border-left:1px solid #dcdcdc;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	background-color:#fff;
+}
+.section_2 p{
+	color:#ec6500;
+	font-size:21px;
+	margin-top:7px;
+}
+.section_2 a:last-child{
+	margin-right:0;
+	padding-top:0;
+	padding-left:30px;
+	line-height:65px;
+}
+.section_2 .list{
+	width:30px;
+	padding:0;
+	color:#aaaaaa;
+	font-family:"SimHei";
+	line-height:65px;
+	font-size:24px;
+}
+.section_2 a:hover{
+	border-top:3px solid #4389c9;
+}
+.section_3{
+	height:100px;
+	margin-top:20px;
+}
+.section_3>div{
+	float:left;
+	margin-top:2px;
+	margin-right:31px;
+	width:200px;
+	height:70px;
+	paddig-left:10px;
+	padding-top:10px;
+	line-height:24px;
+	border:1px solid #dcdcdc;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.section_3 span{
+	color:#aaaaaa;
+	font-size:10px;
+}
+.section_3>div:nth-of-type(1){
+	border-left:3px solid #43b29e;
+	background:#fff url(content-41.jpg) no-repeat right 20px top 20px;
+}
+.section_3>div:nth-of-type(2) {
+  border-left: 3px solid #388ac1;
+  background: #fff url(content-42.jpg) no-repeat right 10px top 10px;
+}
+.section_3>div:nth-of-type(3) {
+  border-left: 3px solid #d04a36;
+  background: #fff url(content-43.jpg) no-repeat right 10px top 10px;
+}
+.section_3>div:nth-of-type(4) {
+	margin-right: 0;
+  border-left: 3px solid #e2cd47;
+  background:#fff url(content-44.jpg) no-repeat right 10px top 10px;
+}
+.box{
+	margin-bottom:20px;
+	font-family:"微软雅黑";
+	border:1px solid #dcdcdc;
+	border-radius:5px;
+	background:#fff;
+	overflow:hidden;
+	margin-top:40px;
+}
+.title{
+	height:30px;
+	margin-bottom:20px;
+	line-height:30px;
+	color:#aaaaaa;
+	padding-left:15px;
+	background:#f4f6f7;
+}
+.section_4{
+	float:left;
+	width:490px;
+	height:360px;
+}
+.section_4.nav{
+	margin-left:15px;
+}
+.section_4 input{
+	display:none;
+	height:25px;
+	width:80px;
+}
+.section_4 label{
+	cursor:pointer;
+}
+.section_4 li{
+	display:inline-block;
+	height:25px;
+	width:80px;
+	color:#535353;
+	text-align:center;
+	line-height:25px;
+	border:1px solid #dcdcdc;
+	border-radius:2px;
+	background:#ececef;
+	overflow:hidden;
+}
+#table1:checked~ul .list1,
+#table2:checked~ul .list2,
+#table3:checked~ul .list3,
+#table4:checked~ul .list4,
+#table5:checked~ul .list5 {
+	border-bottom:0;
+	background:#fff;
+}
+#table1:checked~.tab1,
+#table2:checked~.tab2,
+#table3:checked~.tab3,
+#table4:checked~.tab4,
+#table5:checked~.tab5 {
+	display: block;
+}
+.tab1,
+.tab2,
+.tab3,
+.tab4,
+.tab5{
+	margin-top:-3px;
+	width:450px;
+	height:260px;
+	border:1px solid #dcdcdc;
+	border-radius:2px;
+	display:none;
+}
+.section_4 table{
+	margin:30px auto;
+	width:400px;
+	height:190px;
+	font-family:"SimSun";
+	color:#535353;
+	border-collapse:collapse;
+	border-spacing:0;
+	border:1px solid #dcdcdc;
+}
+.section_4 table td{
+	text-align:center;
+	border:1px solid #dcdcdc;
+	cursor:pointer;
+}
+.section_4 table td:hover{
+	background:#f4f5f6;
+}
+.section_5{
+	margin-left:510px;
+	width:383px;
+	height:360px;
+	margin-top:47px;
+}
+.section_5 form{
+	margin-left:50px;
+}
+.section_5 form div{
+	color:#c3c2c2;
+	line-height:20px;
+	padding-left:20px;
+	border-bottom:1px solid #dcdcdc;
+}
+input,
+texterea{
+	color:#535353;
+	border:none;
+	outline:none;
+}
+.section_5 .left{
+	margin-right:50px;
+}
+#price{
+	float:left;
+	width:80px;
+	margin-right:20px;
+	border-right:1px solid #dcdcdc;
+	overflow:hidden;
+}
+.section_5 input[type="checkbox"] {
+	margin-top: 20px;
+	margin-right: 5px;
+}
+.section_5 label {
+	vertical-align: text-top;
+}
+.section_5 input[type="submit"] {
+	float: right;
+	margin-top: 30px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.section_6 {
+	float: left;
+	width: 381px;
+	height: 360px;
+}
+.section_6 select {
+	display: inline-block;
+	float: left;
+	width: 85px;
+	border: 1px solid #dcdcdc;
+}
+.section_6 select:first-of-type {
+	width: 70px;
+}
+.section_6 select:not(:last-of-type) {
+	margin-right: 0;
+}
+.section_6 button {
+	width: 80px;
+	height: 25px;
+	border: 1px solid #dcdcdc;
+	background: #fff;
+}
+
+.section_6 .date {
+	margin-top: 20px;
+	text-align: center;
+	clear: both;
+}
+
+.section_7 {
+	margin-left: 402px;
+	width: 490px;
+	height: 360px;
+}
+.section_7 table {
+	margin-left: 20px;
+	width: 450px;
+	height: 300px;
+  font-family: "SimHei";
+  color: #535353;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #dcdcdc;
+}
+
+.section_7 table td, th {
+	text-align: center;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+}
+.section_7 table tr:hover {
+  background: #f4f5f6;
+}
+.section_7 th:nth-of-type(3),
+.section_7 td:nth-of-type(3) {
+	text-align: left;
+	width: 250px;
+	padding-left: 20px;
+}
+
+canvas {
+	margin-left: 10px;
+	width: 160px;
+	height: 3px;
+	vertical-align: middle;
+	background: #dcdcdc;
+}
+#dz {
+	background: -webkit-linear-gradient(0deg,#ec6d51 90%,#dcdcdc 10%);
+	background: -o-linear-gradient(0deg,#ec6d51 90%,#dcdcdc 10%);
+	background: linear-gradient(90deg,#ec6d51 90%,#dcdcdc 10%);
+}
+#ft1 {
+	background: -webkit-linear-gradient(0deg,#ef8050 80%,#dcdcdc 20%);
+  background: -o-linear-gradient(0deg,#ef8050 80%,#dcdcdc 20%);
+  background: linear-gradient(90deg,#ef8050 80%,#dcdcdc 20%);
+}
+#ad {
+	background: -webkit-linear-gradient(0deg,#f19f4f 70%,#dcdcdc 30%);
+	background: -o-linear-gradient(0deg,#f19f4f 70%,#dcdcdc 30%);
+	background: linear-gradient(90deg,#f19f4f 70%,#dcdcdc 30%);
+}
+#bt {
+	background: -webkit-linear-gradient(0deg,#7ecaf0 65%,#dcdcdc 35%);
+	background: -o-linear-gradient(0deg,#7ecaf0 65%,#dcdcdc 35%);
+	background: linear-gradient(90deg,#7ecaf0 65%,#dcdcdc 35%);
+}
+#ft {
+	background: -webkit-linear-gradient(0deg,#7ecaf0 60%,#dcdcdc 40%);
+	background: -o-linear-gradient(0deg,#7ecaf0 60%,#dcdcdc 40%);
+	background: linear-gradient(90deg,#7ecaf0 60%,#dcdcdc 40%);
+}
+#bm {
+	background: -webkit-linear-gradient(0deg,#7ecaf0 55%,#dcdcdc 45%);
+	background: -o-linear-gradient(0deg,#7ecaf0 55%,#dcdcdc 45%);
+	background: linear-gradient(90deg,#7ecaf0 55%,#dcdcdc 45%);
+}
+#xd {
+	background: -webkit-linear-gradient(0deg,#7ecaf0 50%,#dcdcdc 50%);
+	background: -o-linear-gradient(0deg,#7ecaf0 50%,#dcdcdc 50%);
+	background: linear-gradient(90deg,#7ecaf0 50%,#dcdcdc 50%);
+}
+#qy {
+	background: -webkit-linear-gradient(180deg,#dcdcdc 55%,#7ecaf0 45%);
+	background: -o-linear-gradient(180deg,#dcdcdc 55%,#7ecaf0 45%);
+	background: linear-gradient(-90deg,#dcdcdc 55%,#7ecaf0 45%);
+}
+#bc {
+	background: -webkit-linear-gradient(180deg,#dcdcdc 60%,#7ecaf0 40%);
+	background: -o-linear-gradient(180deg,#dcdcdc 60%,#7ecaf0 40%);
+	background: linear-gradient(-90deg,#dcdcdc 60%,#7ecaf0 40%);
+}
+#bk {
+	background: -webkit-linear-gradient(180deg,#dcdcdc 65%,#7ecaf0 35%);
+	background: -o-linear-gradient(180deg,#dcdcdc 65%,#7ecaf0 35%);
+	background: linear-gradient(-90deg,#dcdcdc 65%,#7ecaf0 35%);
+}
+</style>
+</head>
+<body>
+<header>
+<img src="顶栏logo.jpg" width="40" height="40" alt="picture"/>
+<form class="form1" action="action_page.php" method="post">
+<input class="search1" type="search" name="search"/>
+<span class="login1">登录</span>
+</form>
+</header>
+<div class="all">
+<aside>
+<article class="article_left1">
+<div class="aside11"><img src="左circle.jpg" width="80" height="80"/><span>AB123</span></div>
+<div class="class12">
+<div class="aside12">
+<div class="aside121">110<br/>收藏</div>
+<div class="aside122">313<br/>粉丝</div>
+</div>
+</article>
+<article class="article_left2">
+<ul class="aside_out">
+<li>个人报表
+<ul class="aside_middle">
+<li>文件一</li>
+<li>文件二
+<ul class="aside_inset">
+<li>文档1</li>
+<li>文档2</li>
+</ul>
+<li>文件三</li>
+</ul>
+</li>
+<li>个人收藏</li>
+<li>我的分享</li>
+<li>图库</li>
+<li>成长记录</li>
+<li>账户信息</li>
+</ul>
+</article>
+</aside>
+<div class="main">
+<nav>
+<a href="#">C站</a>/
+<a href="#">个人报表</a>/
+<a href="#">文件一</a>/
+<a href="#">文档一</a>
+</nav>
+<div class="content">
+<form class="section_1">
+<div>查询项
+<select name="list" id="list">
+<option value="first">第一项</option>
+</select>
+</div>
+<div>买方
+<select name="buy" id="buy">
+<option value="A">小A</option>
+</select>
+<br>
+卖方<select name="sell" id="sell">
+<option value="C">小C</option>
+</select>
+</div>
+<input type="image" src="exchange.jpg">
+<div>日期
+<input type="date" value="2016-04-01">
+总耗时
+<select name="time" id="time">
+<option value="8天">8天</option>
+</select>
+<br>
+人数
+<select name="people" id="people">
+<option value="10人">10人</option>
+</select>
+成交项
+<select name="number" id="number">
+<option value="10项">10项 </option>
+</select>
+</div>
+<input type="submit" value="搜索">
+</form>
+<section class="section_2">
+<a class="list" href="#">&lt;</a>
+<a href="#">10:00am<br><p>￥<span>1200</span></p></a>
+<a href="#">11:00am<br><p>￥<span>1300</span></p></a>
+<a href="#">12:00am<br><p>￥<span>1200</span></p></a>
+<a href="#">01:00am<br><p>￥<span>1400</span></p></a>
+<a href="#">02:00am<br><p>￥<span>1500</span></p></a>
+<a href="#">03:00am<br><p>￥<span>1800</span></p></a>
+<a class="list" href="#">&gt;</a>
+<a href="#">历史查询</a>
+</section>
+<section class="section_3">
+<p>2016年4月份统计</p>
+<div class="page1">133311<br><span>成交量</span></div>
+<div class="page2">133311<br><span>成交量</span></div>
+<div class="page3">133311<br><span>成交量</span></div>
+<div class="page4">133311<br><span>成交量</span></div>
+</section>
+<section class="section_4 box">
+<div class="title">第一组项目</div>
+<div class="nav">
+<input type="radio" name="tabs" checked id="table1">
+<input type="radio" name="tabs" id="table2">
+<input type="radio" name="tabs" id="table3">
+<input type="radio" name="tabs" id="table4">
+<input type="radio" name="tabs" id="table5">
+<ul>
+<div class="tab1">
+<table>
+<tr>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+</tr>
+<tr>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+</tr>
+<tr>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+</tr>
+<tr>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+</tr>
+<tr>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+</tr>
+<tr>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+<td>购买材料一</td>
+</tr>
+</table>
+</div>
+<div class="tab2">
+<table>
+<tr>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+</tr>
+<tr>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+</tr>
+<tr>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+</tr>
+<tr>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+</tr>
+<tr>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+</tr>
+<tr>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+<td>购买材料二</td>
+</tr>
+</table>
+</div>
+<div class="tab3">
+<table>
+<tr>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+</tr>
+<tr>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+</tr>
+<tr>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+</tr>
+<tr>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+</tr>
+<tr>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+</tr>
+<tr>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+<td>购买材料三</td>
+</tr>
+</table>
+</div>
+<div class="tab4">
+<table>
+<tr>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+</tr>
+<tr>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+</tr>
+<tr>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+</tr>
+<tr>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+</tr>
+<tr>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+</tr>
+<tr>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+<td>购买材料四</td>
+</tr>
+</table>
+</div>
+<div class="tab5">
+<table>
+<tr>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+</tr>
+<tr>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+</tr>
+<tr>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+</tr>
+<tr>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+</tr>
+<tr>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+</tr>
+<tr>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+<td>购买材料五</td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<section class="section_5 box">
+<div class="title">第一组项目</div>
+<form action="" method="get">
+<div class="left">
+标题<br>
+<input type="text" placeholder="项目报表三">
+</div>
+<div class="left" id="price">
+价格<br>
+<input type="text" placeholder="￥158">
+</div>
+<div class="right">
+负责人<br>
+<input type="text" placeholder="小A">
+</div>
+<div class="left">
+详细描述<br>
+<textarea name="" id="" cols="30" rows="8" placeholder="该项目目前负责人是......"></textarea>
+</div>
+<input type="checkbox" checked><label for="">遵守保密协议</label>
+<input type="submit" value="搜索">
+</form>
+</section>
+<section class="aection_6 box">
+<div class="title">日历</div>
+<select name="" id="">
+<option value="2016年">2016年</option>
+</select>
+<select name="" id="">
+<option value="4月">4月</option>
+</select>
+<select name="" id="">
+<option value="标注日期">标注日期</option>
+</select>
+<button>返回今天</button>
+<div class="date"></div>
+</section>
+<section class="section_7 box">
+<div class="title">汽车行业品牌榜</div>
+<table>
+<tr>
+<th>排名</th>
+<th>品牌</th>
+<th>搜索指数</th>
+</tr>
+<tr>
+<td>1</td>
+<td>大众</td>
+<td>48912001<canvas id="dz"></canvas></td>
+</tr>
+<tr>
+<td>2</td>
+<td>丰田</td>
+<td>29307333<canvas id="ft1"></canvas></td>
+</tr>
+<tr>
+<td>3</td>
+<td>奥迪</td>
+<td>23139070<canvas id="ft1"></canvas></td>
+</tr>
+<tr>
+<td>4</td>
+<td>本田</td>
+<td>22885564<canvas id="ft1"></canvas></td>
+</tr>
+<tr>
+<td>5</td>
+<td>福特</td>
+<td>22324792<canvas id="ft1"></canvas></td>
+</tr>
+<tr>
+<td>6</td>
+<td>宝马</td>
+<td>21444077<canvas id="ft1"></canvas></td>
+</tr>
+<tr>
+<td>7</td>
+<td>现代</td>
+<td>20114969<canvas id="ft1"></canvas></td>
+</tr>
+<tr>
+<td>8</td>
+<td>起亚</td>
+<td>19251680<canvas id="ft1"></canvas></td>
+</tr>
+<tr>
+<td>9</td>
+<td>奔驰</td>
+<td>19172837<canvas id="ft1"></canvas></td>
+</tr>
+<tr>
+<td>10</td>
+<td>别克</td>
+<td>18544027<canvas id="ft1"></canvas></td>
+</tr>
+</table>
+</section>
+</div>
+</div>
+</div>
+</body>
+</html>
