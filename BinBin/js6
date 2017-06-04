@@ -1,0 +1,26 @@
+<style type="text/css">
+#in_put{display:block;}
+#num_wrap{list-style-type:none;}
+#num_wrap li{
+	float:left;
+	width:80px;
+	height:30px;
+	margin:10px;
+	background-color:#f3060A;
+	color:white;
+	text-align:center;
+}
+#search{display:block;}
+</style>
+</head>
+<body>
+<textarea name="dataInput" id="in_put"></textarea>
+<button id="left_in">左侧入</button>
+<button id="right_in">左侧入</button>
+<button id="left_out">左侧入</button>
+<button id="right_out">左侧入</button>
+<input type="text" id="search" />
+<button id="searched">查询</button>
+<ul id="num_wrap">
+</ul>
+<script type="text/javascript">
