@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>task4</title>
+<style type="text/css">
+#num_wrap{list-style-type:none;}
+#num_wrap li{
+	float:left;
+	width:30px;
+	height:30px;
+	margin:10x;
+	background-color:#F3060A;
+	color:white;
+	text-align:center;
+}
+</style>
+</head>
+<body>
+<input type="text" id="in_put"/>
+<button id="left_in">左侧入</button>
+<button id="right_in">右侧入</button>
+<button id="left_out">左侧出</button>
+<button id="right_out">右侧出</button>
+<ul id="num_wrap">
+</ul>
+<script type="text/javascript">
+var numList=document.getElementById("num_wrap");
+var data=document.getElementById('in_put');
+function LeftIn(){
+	alert("请输入一个数");
+}else if(!isNaN(data.value)){
+	var addli=document.createElement('li');
+	addli.innerHTML=data.value;
+	numList.insertBefore(addli,numList.firstChild);
+	data.value="";
+}else{
+	alert("数据格式不正确，请重新输入！");
+}
+}
+function RightIn(){
+	if(data.value==""){
+		alert("请输入一个数");
+	}
+	else if(!isNaN(data.value)){
+		var addli=document.createElement('li');
+		addli.innerHTML=data.value;
+		numList.insertBefore(addli,null);
+		data.value="";
+	}else{alert("数据格式不正确，请重新输入！");
+	}
+}
+function removeLeft(){
+	numList.removeChild(numList.firstChild);
+}
+function removeChild(numList.lastChild);
+}
+document.getElementById("left_in").onclick=function(){LeftIn()};
+document.getElementById("right_in").onclick=function(){RightIn()};
+document.getElementById("left_out").onclick=function(){removeLeft()};
+document.getElementById("right_out").onclick=function(){removeRight()};
+numList.addEventListener('click',function(event){
+	if(event.target.nodeName.toLowerCase()=="li"){
+		numList.removeChlid(event.target);
+	}
+});
+</script>
+</body>
+</html>
+
