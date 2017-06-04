@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>task4</title>
+<style>
+span{
+	display:inline-block;
+	margin:10px 5px;
+	padding:0px 10px;
+	height:30px;
+	width:20px;
+	line-height:30px;
+	vertical-align:bottom;
+	background-color:green;
+	cursor:pointer;
+}
+</style>
+</head>
+<body>
+<input type="text" id="num">
+<button id="left_in">左侧入</button>
+<button id="right_in">右侧入</button>
+<button id="left_out">左侧出</button>
+<button id="right_out">右侧出</button>
+<button id="sort">排序</button>
+<div id="queue"></div>
+<script type="text/javascript">
+var $ = function(id){
+	return document.getElementById(id);
+}
+function leftIn(queue){
+	var num =$("num").value;
+	if (checkInput(num)){
+		var span=document.createElement("span");
+		span.style.height=num*2+"px";
+		span.innerHTML=num;
+		var spanlist=queue.childNodes;
+		if(queue.childElementCount<60){
+			queue.insertBefore(span,spanlist[0]);
+		}else{
+			alert("最多插入60个子节点！");
+		}
+	}
+}
+function rightIn(queue){
+		var num=$("num").value;
+		if(checkInput(num)){
+			var span=document.createElement("span");
+			span.style.height=num*2+"px";
+			span.innerHTML=num;
+			if(queue.childElementCount<60){
+				queue.appendChild(span);
+			}else{
+				alert("最多插入60个子节点！");
+			}
+		}
+}
+function leftOut(queue){
+	var childs=queue.childNodes;
+	alert(childs[0].innerHTML);
+	queue.removeChild(childs[0]);
+}
+function rightOut(queue){
+	var childs=queue.childNodes;
+	alert(childs[childs.length-1].innerHTML);
+	queue.removeChild(childs[childs.length-1]);
+}
+function sortQueue(queue){
+	var spanlist=queue.childNodes;
+	var data=[];
+	for(var i=0;i<queue.childElementCount;i++){
+		var temp=spanlist[i].childNodes[0].nodeValue;
+		data.push(temp);
+	}
+	data.sort(function(a,b){
+		returna-b;
+	});
+	for(var j=0;j<data.length;j++){
+		spanlist[j].innerHTML=data[j];
+		spanlist[j].style.height=data[j]*2+"px";
+	}
+	return spanlist;
+}
+function checkInput(num){
+	reg=/^[-+]?\d*$/;
+	if(num==""){
+		alert("不能输入为空！");
+		return false;
+	}else if (!reg.test(num)){
+		alert("只能输入为整数！");
+		return false;
+	}else if(num>100|| num<10){
+		alert("输入的数字只能在10-100之间，请重新输入！")
+		return false;
+	}else{
+		return ture;
+	}
+}
+function init(){
+	var queue=$("queue");
+	$("left_in").onclick=function(){
+		leftIn(queue);
+	};
+	$("right_in").onclick=function(){
+		rightIn(queue);
+	};
+	$("left_out").onlick=function(){
+		leftOut(queue);
+	};
+	$("right_out").onclick=function(){
+		rightOut(queue);
+	};
+	$("sort").onclick=function(){
+		sortQueue(queue);
+	};
+	queue.onclick=function(e){
+		e=e||window.event;
+		var t=e.target||e.srcElement;
+		var tagName=t.tagName;
+		if(tagName=="SPAN"){
+			queue.removeChild(t);
+		}
+	}
+}
+init();
+</script>
+</body>
+</html>
+	
