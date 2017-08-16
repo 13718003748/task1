@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IMOOC5 Enterprise Page Layout</title>
+    <base target="_blank">
+    <link href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- 引入轮播图库开始, 参考http://www.jq22.com/jquery-info10671 -->
+    <link rel="stylesheet" type="text/css" href="css/vmcSlider/style.css" />
+    <script type="text/javascript" src="js/vmcSlider/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/vmcSlider/vmc.slider.full.min.js"></script>
+    <script type="text/javascript">
+    $("document").ready(function() {
+        /* 配置选项 */
+        var options = {
+            width: 1000, // 宽度
+            height: 310, // 高度
+            gridCol: 10, // 网格列数
+            gridRow: 5, // 网格行数
+            gridVertical: 20, // 栅格列数
+            gridHorizontal: 10, // 栅格行数
+            autoPlay: true, // 自动播放
+            ascending: true, // 图片按照升序播放
+            effects: [ // 使用的转场动画效果
+                'fade', 'fadeLeft', 'fadeRight', 'fadeTop', 'fadeBottom', 'fadeTopLeft', 'fadeBottomRight',
+                'blindsLeft', 'blindsRight', 'blindsTop', 'blindsBottom', 'blindsTopLeft', 'blindsBottomRight',
+                'curtainLeft', 'curtainRight', 'interlaceLeft', 'interlaceRight', 'mosaic', 'bomb', 'fumes'
+            ],
+            ie6Tidy: false, // IE6下精简效果
+            random: false, // 随机使用转场动画效果
+            duration: 4000, // 图片停留时长（毫秒）
+            speed: 900 // 转场效果时长（毫秒）
+        };
+        /* 创建轮播效果 */
+        $('#slider').vmcSlider(options);
+    });
+    </script>
+    <!-- 引入轮播图库结束 -->
+</head>
+
+<body>
+    <!-- 页面主体, 宽1000px, 居中, 开始 -->
+    <div class="main">
+        <!-- 头部开始 -->
+        <div class="header">
+            <a href="http://www.imooc.com"><img src="http://img.mukewang.com/53edadad0001efe202000070.jpg"></a>
+            <ul class="nav">
+                <li><a href="#">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                <li><a href="#">产品信息</a></li>
+                <li><a href="#">解决方案</a></li>
+                <li><a href="#">产品价格</a></li>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+        <!-- 头部结束 -->
+        <!-- 轮播图开始 -->
+        <div id="slider">
+            <a href="#"><img src="http://img.mukewang.com/53edad3e0001afad10000318.jpg" /></a>
+            <a href="#"><img src="http://img.mukewang.com/53edad2c0001b61310000314.jpg" /></a>
+            <a href="#"><img src="http://img.mukewang.com/53edad1600019ae910000310.jpg" /></a>
+        </div>
+        <!-- 轮播图结束 -->
+        <!-- 动态新闻条开始 -->
+        <div class="rollNews">
+            <div class="newsTitle">滚动新闻</div>
+            <div id="newsContent" class="newsContent">这里是滚动新闻哦 !</div>
+            <script type="text/javascript">
+            function rollingNews() {
+                var newsArr = ["这里是滚动新闻哦 !", "看到我在变化了么 ?", "我会实时更新的...", "你有啥新鲜事也可以分享给我呀 :)", "不要做标题党呀..."];
+                var newsIndex = Math.floor(Math.random() * 5);
+                document.getElementById("newsContent").innerHTML = newsArr[newsIndex];
+            }
+            setInterval(rollingNews, 3000);
+            </script>
+        </div>
+        <!-- 动态新闻条结束 -->
+        <!-- 广告Banner开始 -->
+        <div>
+            <div class="brAds">
+                <img src="http://img.mukewang.com/53edad54000119fb03300130.jpg">
+                <div class="brTitle">玩转BootStrap</div>
+            </div>
+            <div class="brAds">
+                <img src="http://img.mukewang.com/53edad690001260a03300130.jpg">
+                <div class="brTitle">企业网站案例</div>
+            </div>
+            <div class="brAds">
+                <img src="http://img.mukewang.com/53edad7a0001cde803300130.jpg">
+                <div class="brTitle">JavaScript基础</div>
+            </div>
+        </div>
+        <!-- 广告Banner结束 -->
+        <!-- 新闻联系栏开始 -->
+        <div class="newsAndContact">
+            <div class="newsCenter">
+                <div class="newsHeader">新闻中心</div>
+                <div class="newsSec">
+                    <div class="newsDate">8月
+                        <br>23日</div>
+                    <div class="newsIntro">
+                        <h3><a href="javascript:void(0)">学习计划之"Android攻城狮初养成"</a></h3>
+                        <p>想成为Android攻城狮?想开发一款专属APP?没有任何基础的你, 应该从何学起?</p>
+                    </div>
+                </div>
+                <hr class="secLine">
+                <div class="newsSec">
+                    <div class="newsDate">8月
+                        <br>23日</div>
+                    <div class="newsIntro">
+                        <h3><a href="javascript:void(0)">学习计划之"Android攻城狮初养成"</a></h3>
+                        <p>想成为Android攻城狮?想开发一款专属APP?没有任何基础的你, 应该从何学起?</p>
+                    </div>
+                </div>
+                <hr class="secLine">
+                <div class="newsSec">
+                    <div class="newsDate">8月
+                        <br>23日</div>
+                    <div class="newsIntro">
+                        <h3><a href="javascript:void(0)">学习计划之"Android攻城狮初养成"</a></h3>
+                        <p>想成为Android攻城狮?想开发一款专属APP?没有任何基础的你, 应该从何学起?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="newsHeader">热门活动</div>
+                <img src="http://img.mukewang.com/53edacdd0001b8e804820302.jpg">
+                <h3><a href="javascript:void(0)">慕课网2048游戏源码征集活动开始啦</a></h3>
+                <h3><a href="javascript:void(0)">慕课网2048游戏源码征集活动开始啦</a></h3>
+                <h3><a href="javascript:void(0)">慕课网2048游戏源码征集活动开始啦</a></h3>
+                <h3><a href="javascript:void(0)">慕课网2048游戏源码征集活动开始啦</a></h3>
+                <h3><a href="javascript:void(0)">慕课网2048游戏源码征集活动开始啦</a></h3>
+            </div>
+            <div class="contact">
+                <div class="newsHeader">联系我们</div>
+                <p><b>讲师招募</b>
+                    <br>邹同学
+                    <br>电话: 18911888156
+                    <br>QQ: 576264119
+                    <br>Email: daisy@imooc.com
+                </p>
+                <p><b>网站合作</b>
+                    <br>吕同学
+                    <br>电话: 13261771103
+                    <br>QQ: 1059809142
+                    <br>Email: ivyang@imooc.com
+                </p>
+            </div>
+        </div>
+        <!-- 新闻联系栏结束 -->
+        <!-- 页脚开始 -->
+        <div class="clearfix"></div>
+        <div class="footer">
+            Copyright © 2013 imooc.com All Rights Reserved 京ICP备 13046642号-2
+            <br>
+            <br> Edit by <a href="http://www.mike652638.com">mike652638</a>, inspired by <a href="http://www.imooc.com/code/3117">the coding task 7-1 on IMOOC</a>
+        </div>
+        <!-- 页脚结束 -->
+    </div>
+    <!-- 页面主体, 宽1000px, 居中, 结束 -->
+</body>
+
+</html>
